@@ -1,0 +1,75 @@
+{
+  "groups": [
+    {
+      "name": "mysql.core",
+      "type": "me.wubc.common.mysql.core.TransactionConfig",
+      "sourceType": "me.wubc.common.mysql.core.TransactionConfig"
+    },
+    {
+      "name": "mysql.core",
+      "type": "me.wubc.common.mysql.core.MysqlCoreConfig",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mysql.core.aliases-package",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core.helper-dialect",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig",
+      "defaultValue": "mysql"
+    },
+    {
+      "name": "mysql.core.helper-reasonable",
+      "type": "java.lang.Boolean",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig",
+      "defaultValue": false
+    },
+    {
+      "name": "mysql.core.jdbc-driver",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core.jdbc-password",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core.jdbc-url",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core.jdbc-user-name",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core.params",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core.root-mapper",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core.support-methods-arguments",
+      "type": "java.lang.Boolean",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig",
+      "defaultValue": false
+    },
+    {
+      "name": "mysql.core.tx-scan-package",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.mysql.core.TransactionConfig"
+    }
+  ],
+  "hints": []
+}

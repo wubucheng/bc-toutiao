@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="toutiao-utils" />
+        <module name="toutiao-article" />
+        <module name="toutiao-common" />
+        <module name="toutiao-apis" />
+        <module name="toutiao-behavior" />
+        <module name="toutiao-model" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bc-toutiao" target="1.8" />
+      <module name="bc-toutiao-apis" target="1.8" />
+      <module name="bc-toutiao-common" target="1.8" />
+      <module name="bc-toutiao-model" target="1.8" />
+      <module name="bc-toutiao-utils" target="1.8" />
+      <module name="toutiao-apis" target="1.8" />
+      <module name="toutiao-article" target="1.8" />
+      <module name="toutiao-behavior" target="1.8" />
+      <module name="toutiao-common" target="1.8" />
+      <module name="toutiao-model" target="1.8" />
+      <module name="toutiao-utils" target="1.8" />
+      <module name="toutiaoutils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bc-toutiao" options="" />
+      <module name="bc-toutiao-apis" options="-parameters" />
+      <module name="bc-toutiao-common" options="-parameters" />
+      <module name="bc-toutiao-model" options="-parameters" />
+      <module name="bc-toutiao-utils" options="-parameters" />
+      <module name="toutiao-apis" options="-parameters" />
+      <module name="toutiao-article" options="-parameters" />
+      <module name="toutiao-behavior" options="-parameters" />
+      <module name="toutiao-common" options="-parameters" />
+      <module name="toutiao-model" options="-parameters" />
+      <module name="toutiao-utils" options="-parameters" />
+      <module name="toutiaoutils" options="-parameters" />
+    </option>
+  </component>
+</project>
