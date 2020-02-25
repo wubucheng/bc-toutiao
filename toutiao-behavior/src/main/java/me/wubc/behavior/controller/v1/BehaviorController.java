@@ -6,6 +6,7 @@ import me.wubc.model.behavior.dtos.ShowBehaviorDto;
 import me.wubc.model.common.dtos.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,7 @@ public class BehaviorController implements BehaviorControllerApi {
 
     @Override
     @PostMapping("/saveBehavior")
-    public ResponseResult saveShowBehavior(ShowBehaviorDto dto) {
+    public ResponseResult saveShowBehavior(@RequestBody ShowBehaviorDto dto) {
         return appShowBehaviorService.saveShowBehavior(dto);
     }
 }

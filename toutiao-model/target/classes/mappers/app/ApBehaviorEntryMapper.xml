@@ -19,9 +19,11 @@
         from ap_behavior_entry a
         <where>
             <if test="userId!=null">
+                /*!mycat:sql=select id from ap_behavior_entry where burst='0-${userId}'*/
                  and entry_id=#{userId}
             </if>
             <if test="equipmentId!=null">
+                /*!mycat:sql=select id from ap_behavior_entry where burst='0-${equipmentId}'*/
                  and entry_id=#{equipmentId}
             </if>
         </where>

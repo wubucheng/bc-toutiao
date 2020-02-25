@@ -2,13 +2,18 @@
   "groups": [
     {
       "name": "mysql.core",
+      "type": "me.wubc.common.mysql.core.MysqlCoreConfig",
+      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+    },
+    {
+      "name": "mysql.core",
       "type": "me.wubc.common.mysql.core.TransactionConfig",
       "sourceType": "me.wubc.common.mysql.core.TransactionConfig"
     },
     {
-      "name": "mysql.core",
-      "type": "me.wubc.common.mysql.core.MysqlCoreConfig",
-      "sourceType": "me.wubc.common.mysql.core.MysqlCoreConfig"
+      "name": "zk",
+      "type": "me.wubc.common.zookeeper.ZkConfig",
+      "sourceType": "me.wubc.common.zookeeper.ZkConfig"
     }
   ],
   "properties": [
@@ -69,6 +74,16 @@
       "name": "mysql.core.tx-scan-package",
       "type": "java.lang.String",
       "sourceType": "me.wubc.common.mysql.core.TransactionConfig"
+    },
+    {
+      "name": "zk.host",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.zookeeper.ZkConfig"
+    },
+    {
+      "name": "zk.sequence-path",
+      "type": "java.lang.String",
+      "sourceType": "me.wubc.common.zookeeper.ZkConfig"
     }
   ],
   "hints": []

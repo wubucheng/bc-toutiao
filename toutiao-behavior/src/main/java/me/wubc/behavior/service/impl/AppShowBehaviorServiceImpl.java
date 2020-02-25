@@ -57,7 +57,6 @@ public class AppShowBehaviorServiceImpl implements AppShowBehaviorService {
         }
 
         // 根据设备ID或用户ID查询是否是用户行为数据
-        logger.info("执行查询");
         ApBehaviorEntry apBehaviorEntry = apBehaviorEntryMapper.selectByUserIdOrEquipemntId(userId, equipmentId);
         if (apBehaviorEntry == null) {
             return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);

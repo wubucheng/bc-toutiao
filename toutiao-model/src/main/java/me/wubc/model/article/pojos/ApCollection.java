@@ -1,12 +1,13 @@
 package me.wubc.model.article.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import me.wubc.model.annotation.IdEncrypt;
 import org.apache.ibatis.type.Alias;
 
 import java.util.Date;
-
+@ApiModel("文章收藏")
 @Data
 public class ApCollection {
     private Long id;

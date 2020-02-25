@@ -1,10 +1,12 @@
 package me.wubc.model.article.pojos;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import me.wubc.model.annotation.DateConvert;
 
 import java.util.Date;
 
+@ApiModel("文章作者信息")
 @Data
 public class ApAuthor {
     private Integer id;
