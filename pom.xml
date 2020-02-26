@@ -16,6 +16,8 @@
         <module>toutiao-utils</module>
         <module>toutiao-article</module>
         <module>toutiao-behavior</module>
+        <module>service-mycat</module>
+        <module>toutiao-user</module>
 
     </modules>
 

@@ -11,7 +11,9 @@
         <module name="toutiao-common" />
         <module name="toutiao-apis" />
         <module name="toutiao-behavior" />
+        <module name="service-mycat" />
         <module name="toutiao-model" />
+        <module name="toutiao-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,11 +22,13 @@
       <module name="bc-toutiao-common" target="1.8" />
       <module name="bc-toutiao-model" target="1.8" />
       <module name="bc-toutiao-utils" target="1.8" />
+      <module name="service-mycat" target="1.8" />
       <module name="toutiao-apis" target="1.8" />
       <module name="toutiao-article" target="1.8" />
       <module name="toutiao-behavior" target="1.8" />
       <module name="toutiao-common" target="1.8" />
       <module name="toutiao-model" target="1.8" />
+      <module name="toutiao-user" target="1.8" />
       <module name="toutiao-utils" target="1.8" />
       <module name="toutiaoutils" target="1.8" />
     </bytecodeTargetLevel>
@@ -36,11 +40,13 @@
       <module name="bc-toutiao-common" options="-parameters" />
       <module name="bc-toutiao-model" options="-parameters" />
       <module name="bc-toutiao-utils" options="-parameters" />
+      <module name="service-mycat" options="-parameters" />
       <module name="toutiao-apis" options="-parameters" />
       <module name="toutiao-article" options="-parameters" />
       <module name="toutiao-behavior" options="-parameters" />
       <module name="toutiao-common" options="-parameters" />
       <module name="toutiao-model" options="-parameters" />
+      <module name="toutiao-user" options="-parameters" />
       <module name="toutiao-utils" options="-parameters" />
       <module name="toutiaoutils" options="-parameters" />
     </option>

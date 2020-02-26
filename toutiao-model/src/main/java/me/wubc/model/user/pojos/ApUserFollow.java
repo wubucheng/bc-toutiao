@@ -12,7 +12,7 @@ import java.util.Date;
 @Data
 public class ApUserFollow {
     private Long id;
-    @ApiModelProperty("用户ID，被关注者ID")
+    @ApiModelProperty("用户ID，关注者ID")
     @IdEncrypt
     private Long userId;
 

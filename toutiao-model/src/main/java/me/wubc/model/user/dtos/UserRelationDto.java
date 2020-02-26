@@ -11,9 +11,9 @@ public class UserRelationDto {
     @IdEncrypt
     Integer authorId;
 
-    // 用户ID
+    // 用户ID,作者的，无力吐槽这参数了
     @IdEncrypt
-    Integer userId;
+    Long userId;
 
     // 文章
     @IdEncrypt

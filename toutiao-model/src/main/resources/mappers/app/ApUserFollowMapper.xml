@@ -23,5 +23,20 @@
         where user_id = #{userId}
           and  follow_id = #{followId}
     </select>
+
+    <!-- 确定要删除的数据在哪个节点上 -->
+    <delete id="deleteByFollowId">
+        /*!mycat:sql=select id from ap_user_follow where burst='${burst}'*/
+        delete from ap_user_follow where user_id = #{userId} and  follow_id = #{followId}
+    </delete>
+
+    <insert id="insert" parameterType="me.wubc.model.user.pojos.ApUserFollow" >
+        insert into ap_user_follow (id, user_id, follow_id,
+                                    follow_name, level, is_notice,
+                                    created_time,burst)
+        values (#{id}, #{userId}, #{followId},
+                #{followName}, #{level}, #{isNotice},
+                #{createdTime},#{burst})
+    </insert>
 </mapper>
 
