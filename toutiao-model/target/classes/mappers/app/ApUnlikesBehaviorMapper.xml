@@ -22,5 +22,10 @@
         order by created_time desc limit 1
     </select>
 
+    <insert id="insert">
+        insert into ap_unlikes_behavior (entry_id, article_id,type, created_time)
+        values (#{entryId}, #{articleId},#{type,jdbcType=TINYINT}, #{createdTime})
+    </insert>
+
 
 </mapper>

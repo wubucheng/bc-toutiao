@@ -15,5 +15,6 @@ public interface ApLikesBehaviorMapper {
 
     ApLikesBehavior selectLastLike(@Param("burst") String burst,@Param("objectId") Integer objectId,@Param("articleId") Integer articleId, @Param("type") Short type);
 
+    int insert(ApLikesBehavior record);
 
 }

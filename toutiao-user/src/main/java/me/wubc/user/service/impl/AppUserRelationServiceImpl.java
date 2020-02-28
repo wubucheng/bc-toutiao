@@ -48,13 +48,17 @@ public class AppUserRelationServiceImpl implements AppUserRelationService {
     @Override
     public ResponseResult follow(UserRelationDto dto) {
         if (dto.getOperation() == null || dto.getOperation() < 0 || dto.getOperation() > 1) {
+            log.info("operation参数无效");
             return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID, "operation参数无效");
         }
         Long followId = dto.getUserId();
         if (followId == null && dto.getAuthorId() == null) {
+            log.info("followId和authorId无效");
             return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID, "followId和authorId无效");
         } else if (followId == null) {
+            log.info("followId為空");
             ApAuthor apAuthor = apAuthorMapper.selectById(dto.getAuthorId());
+            log.info("apAuthor {} ", apAuthor.toString());
             if (apAuthor != null) {
                 followId = apAuthor.getUserId();
             }
@@ -62,6 +66,7 @@ public class AppUserRelationServiceImpl implements AppUserRelationService {
 
         // 再次判断要关注的人是否存在
         if (followId == null) {
+            log.info("要关注的人不存在");
             return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST, "要关注的人不存在");
         } else {
             ApUser user = AppThreadLocalUtils.getUser();
@@ -69,8 +74,10 @@ public class AppUserRelationServiceImpl implements AppUserRelationService {
                 Short operation = dto.getOperation();
                 if ("0".equals(operation)) {
                     // 0 表示要关注
+                    this.followByUserId(user, followId.intValue(), dto.getArticleId());
                 } else if ("1".equals(operation)) {
                     // 1 表示取消关注
+                    this.followCancelByUserId(user, followId.intValue());
                 }
             } else {
                 return ResponseResult.errorResult(AppHttpCodeEnum.NEED_LOGIN);
@@ -80,7 +87,14 @@ public class AppUserRelationServiceImpl implements AppUserRelationService {
         return null;
     }
 
-
+    /**
+     * 关注
+     *
+     * @param user
+     * @param followId
+     * @param articleId
+     * @return
+     */
     private ResponseResult followByUserId(ApUser user, Integer followId, Integer articleId) {
         ApUser followUser = apUserMapper.selectById(followId);
         if (followUser == null) {
@@ -128,4 +142,20 @@ public class AppUserRelationServiceImpl implements AppUserRelationService {
             return ResponseResult.errorResult(AppHttpCodeEnum.DATA_EXIST, "已关注");
         }
     }
+
+    private ResponseResult followCancelByUserId(ApUser user, Integer followId) {
+        ApUserFollow apUserFollow = apUserFollowMapper.selectByFollowId(BurstUtils.groudOne(user.getId()), user.getId(), followId);
+        if (apUserFollow == null) {
+            return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST, "未关注");
+        } else {
+            ApUserFan apUserFan = apUserFanMapper.selectByFansId(BurstUtils.groudOne(followId), followId, user.getId());
+            if (apUserFan != null) {
+                apUserFanMapper.deleteByFansId(BurstUtils.groudOne(followId), followId, user.getId());
+            }
+            return ResponseResult.okResult(apUserFollowMapper.deleteByFollowId(BurstUtils.groudOne(user.getId()), user.getId(), followId));
+
+        }
+
+    }
+
 }

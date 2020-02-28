@@ -1,6 +1,8 @@
 package me.wubc.article.apis;
 
+import me.wubc.model.behavior.dtos.LikesBehaviorDto;
 import me.wubc.model.behavior.dtos.ShowBehaviorDto;
+import me.wubc.model.behavior.dtos.UnLikesBehaviorDto;
 import me.wubc.model.common.dtos.ResponseResult;
 
 /**
@@ -15,5 +17,9 @@ public interface BehaviorControllerApi {
      * @return
      */
     ResponseResult saveShowBehavior(ShowBehaviorDto dto);
+
+    ResponseResult saveLikesBehavior(LikesBehaviorDto dto);
+
+    ResponseResult saveUnLikesBehavior( UnLikesBehaviorDto dto) ;
 
 }

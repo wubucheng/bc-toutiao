@@ -2,10 +2,12 @@ package me.wubc.model.article.pojos;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
+import lombok.ToString;
 import me.wubc.model.annotation.DateConvert;
 
 import java.util.Date;
 
+@ToString
 @ApiModel("文章作者信息")
 @Data
 public class ApAuthor {

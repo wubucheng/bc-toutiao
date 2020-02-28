@@ -19,5 +19,5 @@ public interface ApUnlikesBehaviorMapper {
      */
     ApUnlikesBehavior selectLastUnLike(@Param("entryId") Integer entryId, @Param("articleId") Integer articleId);
 
-
+    int insert(ApUnlikesBehavior record);
 }
